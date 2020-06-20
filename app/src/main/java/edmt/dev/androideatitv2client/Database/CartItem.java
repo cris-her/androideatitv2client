@@ -5,7 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 
-
+// gr8
 @Entity(tableName = "Cart",primaryKeys = {"uid","categoryId","foodId","foodAddon","foodSize","restaurantId"})
 public class CartItem {
 
