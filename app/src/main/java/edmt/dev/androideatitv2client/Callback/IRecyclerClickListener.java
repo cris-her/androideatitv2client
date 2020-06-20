@@ -3,5 +3,5 @@ package edmt.dev.androideatitv2client.Callback;
 import android.view.View;
 
 public interface IRecyclerClickListener {
-    void onItemClickListener(View view, int pos);
+    void onItemClickListener(View view,int pos);
 }

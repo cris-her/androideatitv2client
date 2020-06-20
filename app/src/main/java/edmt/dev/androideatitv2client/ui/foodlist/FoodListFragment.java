@@ -13,11 +13,14 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -33,6 +36,7 @@ import butterknife.Unbinder;
 import edmt.dev.androideatitv2client.Adapter.MyFoodListAdapter;
 import edmt.dev.androideatitv2client.Common.Common;
 import edmt.dev.androideatitv2client.EventBus.MenuItemBack;
+import edmt.dev.androideatitv2client.Model.CategoryModel;
 import edmt.dev.androideatitv2client.Model.FoodModel;
 import edmt.dev.androideatitv2client.R;
 
@@ -76,7 +80,7 @@ public class FoodListFragment extends Fragment {
         recycler_food_list.setHasFixedSize(true);
         recycler_food_list.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        layoutAnimationController = AnimationUtils.loadLayoutAnimation(getContext(), R.anim.layout_item_from_left);
+        layoutAnimationController = AnimationUtils.loadLayoutAnimation(getContext(),R.anim.layout_item_from_left);
     }
 
 

@@ -1,6 +1,7 @@
 package edmt.dev.androideatitv2client.services;
 
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 
 import androidx.annotation.NonNull;

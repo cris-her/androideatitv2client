@@ -4,8 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
-// gr8
+
+
 @Entity(tableName = "Cart",primaryKeys = {"uid","categoryId","foodId","foodAddon","foodSize","restaurantId"})
 public class CartItem {
 
@@ -156,7 +158,7 @@ public class CartItem {
     public boolean equals(@Nullable Object obj) {
         if(obj == this)
             return true;
-        if(!(obj instanceof CartItem))
+        if(!(obj instanceof  CartItem))
             return false;
         CartItem cartItem = (CartItem)obj;
         return cartItem.getFoodId().equals(this.foodId) &&

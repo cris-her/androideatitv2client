@@ -14,11 +14,15 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
 import android.widget.EditText;
 import android.widget.ImageView;
+
+import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -79,7 +83,7 @@ public class MenuFragment extends Fragment {
 
         dialog = new SpotsDialog.Builder().setContext(getContext()).setCancelable(false).build();
         dialog.show();
-        layoutAnimationController = AnimationUtils.loadLayoutAnimation(getContext(), R.anim.layout_item_from_left);
+        layoutAnimationController = AnimationUtils.loadLayoutAnimation(getContext(),R.anim.layout_item_from_left);
         GridLayoutManager layoutManager = new GridLayoutManager(getContext(),2);
         layoutManager.setOrientation(RecyclerView.VERTICAL);
         layoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {

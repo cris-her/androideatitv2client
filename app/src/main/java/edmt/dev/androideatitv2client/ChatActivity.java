@@ -1,5 +1,14 @@
 package edmt.dev.androideatitv2client;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatEditText;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -17,18 +26,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatEditText;
-import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -252,7 +254,7 @@ public class ChatActivity extends AppCompatActivity implements ILoadTimeFromFire
                 .child(Common.CHAT_DETAIL_REF);
 
         options = new FirebaseRecyclerOptions.Builder<ChatMessageModel>()
-                .setQuery(query, ChatMessageModel.class)
+                .setQuery(query,ChatMessageModel.class)
                 .build();
 
         ButterKnife.bind(this);
@@ -321,7 +323,7 @@ public class ChatActivity extends AppCompatActivity implements ILoadTimeFromFire
             }
     }
 
-    private void uploadPicture(Uri fileUri, ChatMessageModel chatMessageModel, long estimateTimeInMs) {
+    private void uploadPicture(Uri fileUri, ChatMessageModel chatMessageModel,long estimateTimeInMs) {
         if(fileUri != null)
         {
             AlertDialog dialog = new AlertDialog.Builder(ChatActivity.this)
@@ -363,7 +365,7 @@ public class ChatActivity extends AppCompatActivity implements ILoadTimeFromFire
             Toast.makeText(this, "Image is empty", Toast.LENGTH_SHORT).show();
     }
 
-    private void submitChatToFirebase(ChatMessageModel chatMessageModel, boolean isPicture, long estimateTimeInMs) {
+    private void submitChatToFirebase(ChatMessageModel chatMessageModel, boolean isPicture,long estimateTimeInMs) {
         chatRef.child(Common.generateChatRoomId(Common.currentRestaurant.getUid(),
                 Common.currentUser.getUid()))
                 .addListenerForSingleValueEvent(new ValueEventListener() {
@@ -441,7 +443,7 @@ public class ChatActivity extends AppCompatActivity implements ILoadTimeFromFire
         chatInfoModel.setCreateDate(estimateTimeInMs);
 
 
-        chatRef.child(Common.generateChatRoomId(Common.currentRestaurant.getUid(), Common.currentUser.getUid()))
+        chatRef.child(Common.generateChatRoomId(Common.currentRestaurant.getUid(),Common.currentUser.getUid()))
                 .setValue(chatInfoModel)
                 .addOnFailureListener(e -> {
                     Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();

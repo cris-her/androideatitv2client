@@ -19,12 +19,17 @@ import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.StyleSpan;
+import android.util.Size;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
 
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.gson.Gson;
 
@@ -43,6 +48,7 @@ import edmt.dev.androideatitv2client.Model.SizeModel;
 import edmt.dev.androideatitv2client.Model.TokenModel;
 import edmt.dev.androideatitv2client.Model.UserModel;
 import edmt.dev.androideatitv2client.R;
+import edmt.dev.androideatitv2client.services.MyFCMServices;
 
 public class Common {
 
@@ -235,7 +241,7 @@ public class Common {
                 .setContentText(content)
                 .setAutoCancel(true)
                 .setSmallIcon(R.mipmap.ic_launcher_round)
-                .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.drawable.ic_restaurant_menu_black_24dp));
+                .setLargeIcon(BitmapFactory.decodeResource(context.getResources(),R.drawable.ic_restaurant_menu_black_24dp));
         if(pendingIntent != null)
             builder.setContentIntent(pendingIntent);
         Notification notification = builder.build();

@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "androideatitv2client"
+rootProject.name='AndroidEatItV2Client'

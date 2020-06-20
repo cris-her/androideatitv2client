@@ -286,7 +286,7 @@ listener.onLoadOrderFailed(databaseError.getMessage());
                             OrderModel orderModel = ((MyOrdersAdapter)recycler_orders.getAdapter()).getItemAtPosition(pos);
 
                             dialog.show(); // Show dialog if process is run on long time
-                            cartDataSource.cleanCart(Common.currentUser.getUid(), Common.currentRestaurant.getUid()) //Clear all item in cart first
+                            cartDataSource.cleanCart(Common.currentUser.getUid(),Common.currentRestaurant.getUid()) //Clear all item in cart first
                             .subscribeOn(Schedulers.io())
                                     .observeOn(AndroidSchedulers.mainThread())
                                     .subscribe(new SingleObserver<Integer>() {

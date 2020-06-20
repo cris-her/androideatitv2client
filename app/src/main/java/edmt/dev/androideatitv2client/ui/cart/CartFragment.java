@@ -1,6 +1,7 @@
 package edmt.dev.androideatitv2client.ui.cart;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -22,6 +23,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -107,6 +109,7 @@ import edmt.dev.androideatitv2client.Remote.ICloudFunctions;
 import edmt.dev.androideatitv2client.Remote.IFCMService;
 import edmt.dev.androideatitv2client.Remote.RetrofitFCMClient;
 import edmt.dev.androideatitv2client.Remote.RetrofitICloudClient;
+import io.reactivex.Scheduler;
 import io.reactivex.Single;
 import io.reactivex.SingleObserver;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -585,7 +588,7 @@ public class CartFragment extends Fragment implements ILoadTimeFromFirebaseListe
         sumAllItemInCart();
 
         //Addon
-        addonBottomSheetDialog = new BottomSheetDialog(getContext(), R.style.DialogStyle);
+        addonBottomSheetDialog = new BottomSheetDialog(getContext(),R.style.DialogStyle);
         View layout_addon_display = getLayoutInflater().inflate(R.layout.layout_addon_display,null);
         chip_group_addon = (ChipGroup)layout_addon_display.findViewById(R.id.chip_group_addon);
         edt_search = (EditText)layout_addon_display.findViewById(R.id.edt_search);

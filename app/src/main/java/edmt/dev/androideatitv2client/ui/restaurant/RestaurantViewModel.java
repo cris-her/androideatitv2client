@@ -1,5 +1,7 @@
 package edmt.dev.androideatitv2client.ui.restaurant;
 
+import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -13,6 +15,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import edmt.dev.androideatitv2client.Callback.IRecyclerClickListener;
 import edmt.dev.androideatitv2client.Callback.IRestaurantCallbackListener;
 import edmt.dev.androideatitv2client.Common.Common;
 import edmt.dev.androideatitv2client.Model.RestaurantModel;

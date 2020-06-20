@@ -2,6 +2,7 @@ package edmt.dev.androideatitv2client.ui.cart;
 
 import android.content.Context;
 
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -14,6 +15,7 @@ import edmt.dev.androideatitv2client.Database.CartItem;
 import edmt.dev.androideatitv2client.Database.LocalCartDataSource;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
 public class CartViewModel extends ViewModel {
@@ -43,7 +45,7 @@ public class CartViewModel extends ViewModel {
     }
 
     private void getAllCartItems() {
-        compositeDisposable.add(cartDataSource.getAllCart(Common.currentUser.getUid(), Common.currentRestaurant.getUid())
+        compositeDisposable.add(cartDataSource.getAllCart(Common.currentUser.getUid(),Common.currentRestaurant.getUid())
         .subscribeOn(Schedulers.io())
         .observeOn(AndroidSchedulers.mainThread())
         .subscribe(cartItems -> {

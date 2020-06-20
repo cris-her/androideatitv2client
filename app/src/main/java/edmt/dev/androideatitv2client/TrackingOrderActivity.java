@@ -1,5 +1,10 @@
 package edmt.dev.androideatitv2client;
 
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.FragmentActivity;
+
 import android.Manifest;
 import android.animation.ValueAnimator;
 import android.content.Intent;
@@ -10,15 +15,11 @@ import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+
 import android.os.Handler;
 import android.util.Log;
 import android.view.animation.LinearInterpolator;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -179,7 +180,7 @@ public class TrackingOrderActivity extends FragmentActivity implements OnMapRead
     private void drawRoutes() {
         LatLng locationOrder = new LatLng(Common.currentShippingOrder.getOrderModel().getLat(),
                 Common.currentShippingOrder.getOrderModel().getLng());
-        LatLng locationShipper = new LatLng(Common.currentShippingOrder.getCurrentLat(), Common.currentShippingOrder.getCurrentLng());
+        LatLng locationShipper = new LatLng(Common.currentShippingOrder.getCurrentLat(),Common.currentShippingOrder.getCurrentLng());
 
         //Add box
         mMap.addMarker(new MarkerOptions()
@@ -194,7 +195,7 @@ public class TrackingOrderActivity extends FragmentActivity implements OnMapRead
             int height,width;
             height = width=80;
             BitmapDrawable bitmapDrawable = (BitmapDrawable) ContextCompat
-                    .getDrawable(TrackingOrderActivity.this, R.drawable.shippernew);
+                    .getDrawable(TrackingOrderActivity.this,R.drawable.shippernew);
             Bitmap resized = Bitmap.createScaledBitmap(bitmapDrawable.getBitmap(),width,height,false);
 
             shipperMarker =   mMap.addMarker(new MarkerOptions()

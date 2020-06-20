@@ -1,5 +1,6 @@
 package edmt.dev.androideatitv2client.ui.fooddetail;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -7,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -16,15 +18,19 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.andremion.counterfab.CounterFab;
 import com.bumptech.glide.Glide;
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
@@ -322,7 +328,7 @@ public class FoodDetailFragment extends Fragment implements TextWatcher {
 
         waitingDialog = new SpotsDialog.Builder().setCancelable(false).setContext(getContext()).build();
 
-        addonBottomSheetDialog = new BottomSheetDialog(getContext(), R.style.DialogStyle);
+        addonBottomSheetDialog = new BottomSheetDialog(getContext(),R.style.DialogStyle);
         View layout_addon_display = getLayoutInflater().inflate(R.layout.layout_addon_display,null);
         chip_group_addon = (ChipGroup)layout_addon_display.findViewById(R.id.chip_group_addon);
         edt_search = (EditText)layout_addon_display.findViewById(R.id.edt_search);

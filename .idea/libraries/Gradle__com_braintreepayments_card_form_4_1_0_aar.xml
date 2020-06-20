@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: com.braintreepayments:card-form:4.1.0@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/78b1ec9ab40c96292eb3579a19bfdc3c/jetified-card-form-4.1.0/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/78b1ec9ab40c96292eb3579a19bfdc3c/jetified-card-form-4.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/78b1ec9ab40c96292eb3579a19bfdc3c/jetified-card-form-4.1.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.braintreepayments/card-form/4.1.0/6d149131129c8a8aaa75d28243664db08596bf48/card-form-4.1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.braintreepayments/card-form/4.1.0/c968db9a285e45acd9803db50327b8b8e0124989/card-form-4.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

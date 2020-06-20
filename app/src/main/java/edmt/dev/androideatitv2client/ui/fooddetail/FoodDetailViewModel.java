@@ -1,5 +1,6 @@
 package edmt.dev.androideatitv2client.ui.fooddetail;
 
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 

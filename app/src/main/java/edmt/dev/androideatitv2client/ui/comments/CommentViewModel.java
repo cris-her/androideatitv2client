@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel;
 import java.util.List;
 
 import edmt.dev.androideatitv2client.Model.CommentModel;
+import edmt.dev.androideatitv2client.Model.FoodModel;
 
 public class CommentViewModel extends ViewModel {
     private MutableLiveData<List<CommentModel>> mutableLiveDataFoodList;
