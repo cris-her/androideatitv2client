@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.androidwidgets:formatedittext:0.2.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4c4fde9b009135a94495062ce77610ef/jetified-formatedittext-0.2.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4c4fde9b009135a94495062ce77610ef/jetified-formatedittext-0.2.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0ca8803423e0c0cc961e5ed578a5a862/jetified-formatedittext-0.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0ca8803423e0c0cc961e5ed578a5a862/jetified-formatedittext-0.2.0/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.androidwidgets/formatedittext/0.2.0/7d81ed74cbd7ad19b34988036668ff4dae221ec0/formatedittext-0.2.0-javadoc.jar!/" />
