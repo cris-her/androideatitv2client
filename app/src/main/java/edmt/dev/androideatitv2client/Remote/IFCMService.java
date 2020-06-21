@@ -10,7 +10,7 @@ import retrofit2.http.POST;
 public interface IFCMService {
     @Headers({
             "Content-Type:application/json",
-            "AAAA7HLPA4A:APA91bF3pQAJ3mBBmyJvufUEt4XAbC_MSBLizFmuAAIUpkqP-vO2udCEVxtwKhzpnMLZtw6elVnoWkVAWNMhXta7icsjA99QoHQ2UxgHXkmBJtw9kguvlArGayO6ynLs5ZjBMExzPjJr"
+            "Authorization:key=AAAA7HLPA4A:APA91bF3pQAJ3mBBmyJvufUEt4XAbC_MSBLizFmuAAIUpkqP-vO2udCEVxtwKhzpnMLZtw6elVnoWkVAWNMhXta7icsjA99QoHQ2UxgHXkmBJtw9kguvlArGayO6ynLs5ZjBMExzPjJr"
 
     })
     @POST("fcm/send")
